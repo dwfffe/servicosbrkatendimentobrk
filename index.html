@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Brutus Comércio de Gás e Água | Mogi das Cruzes - SP</title>
+
+  <meta
+    name="description"
+    content="Brutus Comércio de Gás e Água — comércio de gás GLP e água mineral em Mogi das Cruzes - SP."
+  >
+
+  <style>
+    :root {
+      --red: #e3262e;
+      --red-dark: #b9161d;
+      --red-light: #fff0f1;
+      --orange: #ff8a00;
+      --dark: #17191d;
+      --text: #626970;
+      --white: #fff;
+      --light: #f7f8fa;
+      --border: #e5e8ec;
+      --green: #20b85a;
+      --shadow: 0 18px 50px rgba(0,0,0,.10);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1150px, 92%);
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-symbol {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 17px;
+      font-weight: 900;
+      background:
+        linear-gradient(145deg, var(--red), #ff4a20);
+      box-shadow: 0 8px 20px rgba(227,38,46,.25);
+    }
+
+    .logo-text {
+      color: var(--dark);
+      font-size: 17px;
+      line-height: 1.1;
+      font-weight: 900;
+    }
+
+    .logo-text small {
+      display: block;
+      margin-top: 4px;
+      color: var(--red);
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      list-style: none;
+    }
+
+    .menu a {
+      color: var(--dark);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .menu a:hover {
+      color: var(--red);
+    }
+
+    .menu .btn-menu {
+      padding: 12px 19px;
+      border-radius: 8px;
+      color: white;
+      background: var(--red);
+    }
+
+    .menu .btn-menu:hover {
+      color: white;
+      background: var(--red-dark);
+    }
+
+    .menu-button {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--dark);
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      padding-top: 76px;
+      min-height: 720px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      color: white;
+
+      background:
+        radial-gradient(
+          circle at 78% 22%,
+          rgba(255,138,0,.38),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #99151c,
+          #e3262e 55%,
+          #ff7514
+        );
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      border: 80px solid rgba(255,255,255,.055);
+      right: -280px;
+      top: -260px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 470px;
+      height: 470px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.04);
+      left: -260px;
+      bottom: -290px;
+    }
+
+    .hero-content {
+      max-width: 760px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .badge {
+      display: inline-flex;
+      padding: 8px 15px;
+      border: 1px solid rgba(255,255,255,.28);
+      border-radius: 30px;
+      background: rgba(255,255,255,.09);
+      color: white;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 21px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: 1.02;
+      letter-spacing: -2.5px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #ffe0a6;
+    }
+
+    .hero p {
+      max-width: 670px;
+      font-size: 19px;
+      color: rgba(255,255,255,.88);
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 23px;
+      border-radius: 9px;
+      font-weight: 800;
+      transition: .2s;
+    }
+
+    .btn-white {
+      background: white;
+      color: var(--red-dark);
+    }
+
+    .btn-white:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,.16);
+    }
+
+    .btn-outline {
+      color: white;
+      border: 1px solid rgba(255,255,255,.4);
+      background: rgba(255,255,255,.08);
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--red-dark);
+    }
+
+    /* =========================
+       QUICK INFO
+    ========================= */
+
+    .quick {
+      margin-top: -60px;
+      position: relative;
+      z-index: 20;
+    }
+
+    .quick-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      overflow: hidden;
+      border-radius: 20px;
+      background: white;
+      box-shadow: var(--shadow);
+    }
+
+    .quick-card {
+      padding: 28px;
+      text-align: center;
+      border-right: 1px solid var(--border);
+    }
+
+    .quick-card:last-child {
+      border-right: 0;
+    }
+
+    .quick-icon {
+      font-size: 27px;
+      margin-bottom: 8px;
+    }
+
+    .quick-card strong {
+      display: block;
+      color: var(--dark);
+      font-size: 16px;
+    }
+
+    .quick-card span {
+      font-size: 13px;
+    }
+
+    /* =========================
+       SECTIONS
+    ========================= */
+
+    section {
+      padding: 95px 0;
+    }
+
+    .section-header {
+      max-width: 700px;
+      margin-bottom: 45px;
+    }
+
+    .section-header.center {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .eyebrow {
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      color: var(--dark);
+      font-size: clamp(31px,4vw,46px);
+      line-height: 1.12;
+      margin-bottom: 14px;
+    }
+
+    .section-description {
+      color: #707a82;
+    }
+
+    .line {
+      width: 55px;
+      height: 3px;
+      border-radius: 4px;
+      background: var(--orange);
+      margin: 17px 0 22px;
+    }
+
+    .center .line {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* =========================
+       EMPRESA
+    ========================= */
+
+    .about {
+      background: var(--light);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .visual {
+      min-height: 440px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 25px;
+      background:
+        radial-gradient(
+          circle at 70% 30%,
+          rgba(255,172,0,.7),
+          transparent 15%
+        ),
+        linear-gradient(
+          145deg,
+          #711219,
+          #e3262e 58%,
+          #ff8b00
+        );
+      box-shadow: var(--shadow);
+    }
+
+    .visual::before {
+      content: "GLP";
+      position: absolute;
+      right: 28px;
+      top: 30px;
+      color: rgba(255,255,255,.08);
+      font-size: 110px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .visual::after {
+      content: "GÁS + ÁGUA";
+      position: absolute;
+      bottom: 32px;
+      left: 30px;
+      color: white;
+      font-size: 34px;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+
+    .about-content h3 {
+      color: var(--dark);
+      font-size: 27px;
+      margin-bottom: 15px;
+    }
+
+    .about-content p {
+      margin-bottom: 16px;
+    }
+
+    .checks {
+      list-style: none;
+      margin-top: 25px;
+    }
+
+    .checks li {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 12px;
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    .check {
+      width: 23px;
+      height: 23px;
+      flex: 0 0 23px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: white;
+      background: var(--red);
+      font-size: 12px;
+    }
+
+    /* =========================
+       SERVIÇOS
+    ========================= */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 23px;
+    }
+
+    .service {
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: white;
+      transition: .25s;
+    }
+
+    .service:hover {
+      transform: translateY(-6px);
+      border-color: transparent;
+      box-shadow: var(--shadow);
+    }
+
+    .service-icon {
+      width: 62px;
+      height: 62px;
+      display: grid;
+      place-items: center;
+      border-radius: 15px;
+      background: var(--red-light);
+      color: var(--red);
+      font-size: 28px;
+      margin-bottom: 19px;
+    }
+
+    .service h3 {
+      color: var(--dark);
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      font-size: 14px;
+    }
+
+    /* =========================
+       DARK SECTION
+    ========================= */
+
+    .dark {
+      background: var(--dark);
+      color: white;
+    }
+
+    .dark .section-title {
+      color: white;
+    }
+
+    .dark .eyebrow {
+      color: #ffad33;
+    }
+
+    .dark .section-description {
+      color: #b9c0c5;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 22px;
+    }
+
+    .feature {
+      padding: 28px 20px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 15px;
+      background: rgba(255,255,255,.035);
+    }
+
+    .feature-icon {
+      font-size: 29px;
+      margin-bottom: 12px;
+    }
+
+    .feature h3 {
+      color: white;
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      color: #aeb6bc;
+      font-size: 13px;
+    }
+
+    /* =========================
+       CNPJ
+    ========================= */
+
+    .company-data {
+      background: var(--light);
+    }
+
+    .data-box {
+      padding: 40px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.04);
+    }
+
+    .data-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .data-item {
+      padding: 20px;
+      background: white;
+    }
+
+    .data-item small {
+      display: block;
+      color: #89939b;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .data-item strong {
+      color: var(--dark);
+      font-size: 15px;
+    }
+
+    /* =========================
+       CONTATO
+    ========================= */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 30px;
+    }
+
+    .contact-info,
+    .contact-form {
+      padding: 35px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+    }
+
+    .contact-info h3,
+    .contact-form h3 {
+      color: var(--dark);
+      font-size: 25px;
+      margin-bottom: 25px;
+    }
+
+    .info {
+      display: flex;
+      gap: 13px;
+      margin-bottom: 22px;
+    }
+
+    .info-icon {
+      width: 44px;
+      height: 44px;
+      flex: 0 0 44px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--red-light);
+      color: var(--red);
+      font-size: 20px;
+    }
+
+    .info strong {
+      display: block;
+      color: var(--dark);
+      margin-bottom: 2px;
+    }
+
+    .info span {
+      font-size: 14px;
+    }
+
+    .whatsapp {
+      margin-top: 8px;
+      background: var(--green);
+      color: white;
+    }
+
+    .whatsapp:hover {
+      background: #159c4b;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      color: var(--dark);
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 7px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      outline: none;
+      font-family: inherit;
+      font-size: 14px;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--red);
+      box-shadow: 0 0 0 3px rgba(227,38,46,.08);
+    }
+
+    textarea {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    .submit {
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+      background: var(--red);
+      color: white;
+      font-size: 15px;
+    }
+
+    .submit:hover {
+      background: var(--red-dark);
+    }
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta {
+      color: white;
+      text-align: center;
+      background:
+        linear-gradient(
+          135deg,
+          #a7151c,
+          #e3262e,
+          #ff7d00
+        );
+    }
+
+    .cta h2 {
+      font-size: clamp(31px,5vw,48px);
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      max-width: 630px;
+      margin: 0 auto 25px;
+      color: rgba(255,255,255,.85);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 55px 0 25px;
+      background: #101216;
+      color: #929aa1;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 40px;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    footer p,
+    footer li {
+      font-size: 14px;
+    }
+
+    footer ul {
+      list-style: none;
+    }
+
+    footer li {
+      margin-bottom: 8px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /* =========================
+       FLOATING WHATSAPP
+    ========================= */
+
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 59px;
+      height: 59px;
+      display: grid;
+      place-items: center;
+      z-index: 2000;
+      border-radius: 50%;
+      color: white;
+      background: #25d366;
+      font-size: 28px;
+      box-shadow: 0 8px 25px rgba(37,211,102,.35);
+      transition: .2s;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+    }
+
+    /* =========================
+       RESPONSIVO
+    ========================= */
+
+    @media(max-width: 850px) {
+
+      .menu-button {
+        display: block;
+      }
+
+      .menu {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 3px;
+        background: white;
+        box-shadow: 0 10px 20px rgba(0,0,0,.08);
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
+      .menu a {
+        display: block;
+        padding: 11px;
+      }
+
+      .quick-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-card {
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .quick-card:last-child {
+        border-bottom: 0;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .features {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media(max-width: 560px) {
+
+      .hero {
+        min-height: 650px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .services-grid,
+      .features,
+      .data-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .data-box,
+      .contact-info,
+      .contact-form {
+        padding: 25px;
+      }
+
+      .visual {
+        min-height: 330px;
+      }
+
+      .visual::after {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a href="#inicio" class="logo">
+
+        <div class="logo-symbol">
+          BG
+        </div>
+
+        <div class="logo-text">
+          Brutus Gás & Água
+          <small>Mogi das Cruzes</small>
+        </div>
+
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        aria-label="Abrir menu">
+        ☰
+      </button>
+
+      <ul class="menu" id="menu">
+
+        <li>
+          <a href="#inicio">Início</a>
+        </li>
+
+        <li>
+          <a href="#empresa">Empresa</a>
+        </li>
+
+        <li>
+          <a href="#servicos">Serviços</a>
+        </li>
+
+        <li>
+          <a href="#cnpj">CNPJ</a>
+        </li>
+
+        <li>
+          <a href="#contato" class="btn-menu">
+            Pedir agora
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <main>
+
+    <section class="hero" id="inicio">
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <div class="badge">
+            🔥 Gás GLP &nbsp; • &nbsp; 💧 Água Mineral
+          </div>
+
+          <h1>
+            Gás e água
+            <span>para sua casa.</span>
+          </h1>
+
+          <p>
+            A Brutus Comércio de Gás e Água atua
+            em Mogi das Cruzes com comércio de gás
+            GLP e água mineral, oferecendo praticidade
+            para o dia a dia.
+          </p>
+
+          <div class="buttons">
+
+            <a
+              href="#contato"
+              class="btn btn-white">
+              Fazer pedido
+            </a>
+
+            <a
+              href="#servicos"
+              class="btn btn-outline">
+              Ver produtos
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUICK INFO
+    ========================= -->
+
+    <section class="quick">
+
+      <div class="container">
+
+        <div class="quick-grid">
+
+          <div class="quick-card">
+
+            <div class="quick-icon">
+              🔥
+            </div>
+
+            <strong>
+              Gás GLP
+            </strong>
+
+            <span>
+              Comércio varejista de gás
+            </span>
+
+          </div>
+
+
+          <div class="quick-card">
+
+            <div class="quick-icon">
+              💧
+            </div>
+
+            <strong>
+              Água Mineral
+            </strong>
+
+            <span>
+              Comércio e distribuição
+            </span>
+
+          </div>
+
+
+          <div class="quick-card">
+
+            <div class="quick-icon">
+              📍
+            </div>
+
+            <strong>
+              Mogi das Cruzes
+            </strong>
+
+            <span>
+              Mogi Moderno — SP
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EMPRESA
+    ========================= -->
+
+    <section class="about" id="empresa">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div class="visual"></div>
+
+          <div class="about-content">
+
+            <div class="section-header">
+
+              <div class="eyebrow">
+                Sobre a empresa
+              </div>
+
+              <h2 class="section-title">
+                Gás e água com praticidade
+              </h2>
+
+              <div class="line"></div>
+
+              <p>
+                A Brutus Comércio de Gás e Água Ltda
+                é uma empresa localizada em Mogi das
+                Cruzes, São Paulo.
+              </p>
+
+              <p>
+                Sua atividade principal é o comércio
+                varejista de gás liquefeito de petróleo
+                (GLP), além do comércio atacadista de
+                água mineral.
+              </p>
+
+            </div>
+
+
+            <ul class="checks">
+
+              <li>
+                <span class="check">✓</span>
+                Comércio varejista de GLP
+              </li>
+
+              <li>
+                <span class="check">✓</span>
+                Comércio de água mineral
+              </li>
+
+              <li>
+                <span class="check">✓</span>
+                Atendimento em Mogi das Cruzes
+              </li>
+
+              <li>
+                <span class="check">✓</span>
+                Empresa com situação cadastral ativa
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVIÇOS
+    ========================= -->
+
+    <section id="servicos">
+
+      <div class="container">
+
+        <div class="section-header center">
+
+          <div class="eyebrow">
+            Produtos e serviços
+          </div>
+
+          <h2 class="section-title">
+            O que oferecemos
+          </h2>
+
+          <div class="line"></div>
+
+          <p class="section-description">
+            Conheça as principais atividades comerciais
+            registradas para a empresa.
+          </p>
+
+        </div>
+
+
+        <div class="services-grid">
+
+
+          <article class="service">
+
+            <div class="service-icon">
+              🔥
+            </div>
+
+            <h3>
+              Gás de cozinha
+            </h3>
+
+            <p>
+              Comércio varejista de gás liquefeito
+              de petróleo (GLP) em botijões para
+              uso doméstico.
+            </p>
+
+          </article>
+
+
+          <article class="service">
+
+            <div class="service-icon">
+              💧
+            </div>
+
+            <h3>
+              Água mineral
+            </h3>
+
+            <p>
+              Comércio atacadista de água mineral
+              para abastecimento de clientes e
+              estabelecimentos.
+            </p>
+
+          </article>
+
+
+          <article class="service">
+
+            <div class="service-icon">
+              🛒
+            </div>
+
+            <h3>
+              Outros produtos
+            </h3>
+
+            <p>
+              Comércio varejista de outros produtos
+              conforme as atividades secundárias
+              registradas.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         DIFERENCIAIS
+    ========================= -->
+
+    <section class="dark">
+
+      <div class="container">
+
+        <div class="section-header center">
+
+          <div class="eyebrow">
+            Brutus Gás & Água
+          </div>
+
+          <h2 class="section-title">
+            Soluções para o dia a dia
+          </h2>
+
+          <div class="line"></div>
+
+        </div>
+
+
+        <div class="features">
+
+
+          <div class="feature">
+
+            <div class="feature-icon">
+              🔥
+            </div>
+
+            <h3>
+              Gás GLP
+            </h3>
+
+            <p>
+              Comércio varejista de gás
+              liquefeito de petróleo.
+            </p>
+
+          </div>
+
+
+          <div class="feature">
+
+            <div class="feature-icon">
+              💧
+            </div>
+
+            <h3>
+              Água mineral
+            </h3>
+
+            <p>
+              Comércio atacadista de
+              água mineral.
+            </p>
+
+          </div>
+
+
+          <div class="feature">
+
+            <div class="feature-icon">
+              📍
+            </div>
+
+            <h3>
+              Localização
+            </h3>
+
+            <p>
+              Mogi Moderno, Mogi das
+              Cruzes — SP.
+            </p>
+
+          </div>
+
+
+          <div class="feature">
+
+            <div class="feature-icon">
+              ✓
+            </div>
+
+            <h3>
+              Situação ativa
+            </h3>
+
+            <p>
+              Cadastro empresarial
+              registrado como ativo.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CNPJ
+    ========================= -->
+
+    <section class="company-data" id="cnpj">
+
+      <div class="container">
+
+        <div class="section-header center">
+
+          <div class="eyebrow">
+            Informações empresariais
+          </div>
+
+          <h2 class="section-title">
+            Dados cadastrais
+          </h2>
+
+          <div class="line"></div>
+
+        </div>
+
+
+        <div class="data-box">
+
+          <div class="data-grid">
+
+
+            <div class="data-item">
+
+              <small>
+                Razão social
+              </small>
+
+              <strong>
+                BRUTUS COMERCIO DE GAS E AGUA LTDA
+              </strong>
+
+            </div>
+
+
+            <div class="data-item">
+
+              <small>
+                Nome fantasia
+              </small>
+
+              <strong>
+                BRUTUS COMERCIO DE GAS E AGUA
+              </strong>
+
+            </div>
+
+
+            <div class="data-item">
+
+              <small>
+                CNPJ
+              </small>
+
+              <strong>
+                57.832.366/0001-44
+              </strong>
+
+            </div>
+
+
+            <div class="data-item">
+
+              <small>
+                Situação cadastral
+              </small>
+
+              <strong>
+                ATIVA
+              </strong>
+
+            </div>
+
+
+            <div class="data-item">
+
+              <small>
+                Data de abertura
+              </small>
+
+              <strong>
+                24/10/2024
+              </strong>
+
+            </div>
+
+
+            <div class="data-item">
+
+              <small>
+                Natureza jurídica
+              </small>
+
+              <strong>
+                Sociedade Empresária Limitada
+              </strong>
+
+            </div>
+
+
+            <div class="data-item">
+
+              <small>
+                Porte
+              </small>
+
+              <strong>
+                Microempresa
+              </strong>
+
+            </div>
+
+
+            <div class="data-item">
+
+              <small>
+                Capital social
+              </small>
+
+              <strong>
+                R$ 20.000,00
+              </strong>
+
+            </div>
+
+
+            <div class="data-item">
+
+              <small>
+                CNAE principal
+              </small>
+
+              <strong>
+                47.84-9-00 — Comércio varejista
+                de GLP
+              </strong>
+
+            </div>
+
+
+            <div class="data-item">
+
+              <small>
+                CNAE secundário
+              </small>
+
+              <strong>
+                46.35-4-01 — Comércio atacadista
+                de água mineral
+              </strong>
+
+            </div>
+
+
+            <div class="data-item">
+
+              <small>
+                Município
+              </small>
+
+              <strong>
+                Mogi das Cruzes — SP
+              </strong>
+
+            </div>
+
+
+            <div class="data-item">
+
+              <small>
+                CEP
+              </small>
+
+              <strong>
+                08720-290
+              </strong>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTATO
+    ========================= -->
+
+    <section id="contato">
+
+      <div class="container">
+
+        <div class="section-header center">
+
+          <div class="eyebrow">
+            Faça seu pedido
+          </div>
+
+          <h2 class="section-title">
+            Entre em contato
+          </h2>
+
+          <div class="line"></div>
+
+          <p class="section-description">
+            Entre em contato para consultar produtos,
+            disponibilidade e atendimento.
+          </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+          <div class="contact-info">
+
+            <h3>
+              Fale conosco
+            </h3>
+
+
+            <div class="info">
+
+              <div class="info-icon">
+                📍
+              </div>
+
+              <div>
+
+                <strong>
+                  Endereço
+                </strong>
+
+                <span>
+                  Avenida Prefeito Carlos Alberto Lopes,
+                  321<br>
+                  Mogi Moderno<br>
+                  Mogi das Cruzes — SP<br>
+                  CEP 08720-290
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="info">
+
+              <div class="info-icon">
+                📞
+              </div>
+
+              <div>
+
+                <strong>
+                  Telefone
+                </strong>
+
+                <span>
+                  (11) 4220-2456
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="info">
+
+              <div class="info-icon">
+                🏢
+              </div>
+
+              <div>
+
+                <strong>
+                  CNPJ
+                </strong>
+
+                <span>
+                  57.832.366/0001-44
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="info">
+
+              <div class="info-icon">
+                📋
+              </div>
+
+              <div>
+
+                <strong>
+                  Situação
+                </strong>
+
+                <span>
+                  Empresa ativa
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <a
+              href="https://wa.me/551142202456"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn whatsapp">
+
+              💬 Falar pelo WhatsApp
+
+            </a>
+
+          </div>
+
+
+          <div class="contact-form">
+
+            <h3>
+              Solicite informações
+            </h3>
+
+            <form id="contactForm">
+
+              <div class="form-group">
+
+                <label for="nome">
+                  Nome
+                </label>
+
+                <input
+                  type="text"
+                  id="nome"
+                  placeholder="Seu nome"
+                  required>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="telefone">
+                  Telefone
+                </label>
+
+                <input
+                  type="tel"
+                  id="telefone"
+                  placeholder="(00) 00000-0000"
+                  required>
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="produto">
+                  Produto
+                </label>
+
+                <input
+                  type="text"
+                  id="produto"
+                  placeholder="Ex.: gás ou água">
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="mensagem">
+                  Mensagem
+                </label>
+
+                <textarea
+                  id="mensagem"
+                  placeholder="Digite sua mensagem"
+                  required></textarea>
+
+              </div>
+
+
+              <button
+                type="submit"
+                class="btn submit">
+
+                Enviar pelo WhatsApp
+
+              </button>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================= -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <h2>
+          Precisa de gás ou água?
+        </h2>
+
+        <p>
+          Entre em contato com a Brutus Comércio
+          de Gás e Água e consulte o atendimento.
+        </p>
+
+        <a
+          href="https://wa.me/551142202456"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-white">
+
+          Fazer pedido
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div>
+
+          <h3>
+            Brutus Gás & Água
+          </h3>
+
+          <p>
+            Comércio de gás GLP e água mineral
+            em Mogi das Cruzes — SP.
+          </p>
+
+          <p style="margin-top:10px;">
+            CNPJ: 57.832.366/0001-44
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Navegação
+          </h3>
+
+          <ul>
+
+            <li>
+              <a href="#inicio">
+                Início
+              </a>
+            </li>
+
+            <li>
+              <a href="#empresa">
+                Empresa
+              </a>
+            </li>
+
+            <li>
+              <a href="#servicos">
+                Serviços
+              </a>
+            </li>
+
+            <li>
+              <a href="#cnpj">
+                CNPJ
+              </a>
+            </li>
+
+            <li>
+              <a href="#contato">
+                Contato
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h3>
+            Contato
+          </h3>
+
+          <ul>
+
+            <li>
+              Mogi das Cruzes — SP
+            </li>
+
+            <li>
+              (11) 4220-2456
+            </li>
+
+            <li>
+              CEP 08720-290
+            </li>
+
+            <li>
+              CNPJ: 57.832.366/0001-44
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+
+        © <span id="year"></span>
+        Brutus Comércio de Gás e Água.
+        Todos os direitos reservados.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       WHATSAPP FLUTUANTE
+  ========================= -->
+
+  <a
+    href="https://wa.me/551142202456"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float"
+    aria-label="Falar pelo WhatsApp">
+
+    💬
+
+  </a>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    /* MENU MOBILE */
+
+    const menuButton =
+      document.getElementById("menuButton");
+
+    const menu =
+      document.getElementById("menu");
+
+    menuButton.addEventListener(
+      "click",
+      function() {
+
+        menu.classList.toggle("active");
+
+      }
+    );
+
+
+    /* FECHAR MENU AO CLICAR */
+
+    document
+      .querySelectorAll(".menu a")
+      .forEach(function(link) {
+
+        link.addEventListener(
+          "click",
+          function() {
+
+            menu.classList.remove("active");
+
+          }
+        );
+
+      });
+
+
+    /* ANO */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    /* FORMULÁRIO -> WHATSAPP */
+
+    document
+      .getElementById("contactForm")
+      .addEventListener(
+        "submit",
+        function(event) {
+
+          event.preventDefault();
+
+          const nome =
+            document.getElementById("nome").value;
+
+          const telefone =
+            document.getElementById("telefone").value;
+
+          const produto =
+            document.getElementById("produto").value;
+
+          const mensagem =
+            document.getElementById("mensagem").value;
+
+
+          const texto =
+            "Olá, Brutus Comércio de Gás e Água!%0A%0A" +
+
+            "Nome: " +
+            encodeURIComponent(nome) +
+
+            "%0A" +
+
+            "Telefone: " +
+            encodeURIComponent(telefone) +
+
+            "%0A" +
+
+            "Produto: " +
+            encodeURIComponent(produto) +
+
+            "%0A%0A" +
+
+            "Mensagem: " +
+            encodeURIComponent(mensagem);
+
+
+          window.open(
+            "https://wa.me/551142202456?text=" +
+            texto,
+            "_blank"
+          );
+
+        }
+      );
+
+  </script>
+
+</body>
+</html>
